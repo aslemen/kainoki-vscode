@@ -12,7 +12,7 @@
             "patterns": [
                 {
                     "name": "entity.name.type.kai",
-                    "match": "(multi-sentence|PRN|PP-VOC|PP-TPC|PP-TMP|PP-SNJ2|PP-SCON|PP-SBJ|PP-PRP|PP-PRD|PP-OB2|PP-OB1|PP-MSR|PP-LOC|PP-LGS|PP-CONJ|PP-CND|PP-ADV|PP|PNLP|NUMCLP|NP-VOC|NP-TPC|NP-TMP|NP-SBJ2|NP-SBJ|NP-PRD|NP-POS|NP-OB2|NP-OB1|NP-MSR|NP-LOC|NP-LGS|NP-ADV|NP|NML|IP-SUB|IP-SMC|IP-SCON|IP-REL|IP-NML|IP-MAT|IP-IMP|IP-EMB|IP-CONJ|IP-CND|IP-ADV|INTJP|FS|FRAG-IMP|FRAG|CP-THT|CP-QUE|CP-FINAL|CP-EXL|CONJP|ADVP)"
+                    "match": "(@non_terminals)"
                 }
             ]
         },
@@ -20,7 +20,7 @@
             "patterns": [
                 {
                     "name": "variable.language.kai",
-                    "match": "(WPRO|WNUM|WD|WADV|VB2|VB0|VB|SYM|QUOT|QN|Q|PU|PRO|PNL|P-ROLE|P-OPTR|P-FINAL|P-CONN|P-COMP|P|NUM|NPR|NEG|N|MD|INTJ|ID|FW|FN|D|CONJ|CL|AXD|AX|ADV|ADJN|ADJI|-RRB-|-LRB-)"
+                    "match": "(@terminals)"
                 }
             ]
         },
@@ -28,7 +28,7 @@
             "patterns": [
                 {
                     "name": "constant.language.kai",
-                    "match": "(\\*speaker\\*|\\*speaker+pro\\*|\\*speaker+hearer\\*|\\*pro\\*|\\*hearer\\*|\\*hearer+pro\\*|\\*exp\\*|\\*arb\\*|\\*\\*\\*|\\*T\\*|\\*.e\\*)"
+                    "match": "(@operators)"
                 }
             ]
         },
@@ -61,7 +61,7 @@
         "first-nodes--labels":{
             "patterns": [
                 {
-                    "match": "(multi-sentence|WPRO|WNUM|WD|WADV|VB2|VB0|VB|SYM|QUOT|QN|Q|PU|PRO|PRN|PP-VOC|PP-TPC|PP-TMP|PP-SNJ2|PP-SCON|PP-SBJ|PP-PRP|PP-PRD|PP-OB2|PP-OB1|PP-MSR|PP-LOC|PP-LGS|PP-CONJ|PP-CND|PP-ADV|PP|PNLP|PNL|P-ROLE|P-OPTR|P-FINAL|P-CONN|P-COMP|NUMCLP|NUM|NPR|NP-VOC|NP-TPC|NP-TMP|NP-SBJ2|NP-SBJ|NP-PRD|NP-POS|NP-OB2|NP-OB1|NP-MSR|NP-LOC|NP-LGS|NP-ADV|NML|NEG|N|MD|IP-SUB|IP-SMC|IP-SCON|IP-REL|IP-NML|IP-MAT|IP-IMP|IP-EMB|IP-CONJ|IP-CND|IP-ADV|INTJP|INTJ|ID|FW|FS|FRAG-IMP|FRAG|FN|D|CP-THT|CP-QUE|CP-FINAL|CP-EXL|CONJP|CONJ|CL|AXD|AX|ADVP|ADV|ADJN|ADJI|-RRB-|-LRB-)?(.*)",
+                    "match": "(@nodes)?(.*)",
                     "captures": {
                         "1":{
                             "patterns": [
