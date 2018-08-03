@@ -1,0 +1,26 @@
+{
+    "name": "kaivsc",
+    "displayName": "kainoki-vscode",
+    "description": "The language support of the NPCMJ corpus for VS Code",
+    "version": "0.0.1",
+    "publisher": "twotrees12",
+    "engines": {
+        "vscode": "^1.25.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "kai",
+            "aliases": ["kainoki", "kai"],
+            "extensions": [".kai",".psd"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "kai",
+            "scopeName": "text.penn.kai",
+            "path": "./syntaxes/kai.tmLanguage.json"
+        }]
+    }
+}

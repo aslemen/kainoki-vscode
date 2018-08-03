@@ -1,0 +1,119 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "kainoki",
+	"scopeName": "text.penn.kai",
+	"patterns": [
+		{
+			"include": "#nodes"
+		}
+	],
+	"repository": {
+		"non-terminals": {
+			"patterns": [
+				{
+					"name": "entity.name.function.kai",
+					"match": "\\b(NP-SBJ|PP-SBJ)\\b$"
+				}
+			]
+		},
+		"terminals":{
+			"patterns": [
+				{
+					"name": "variable.kai",
+					"match": "\\bN\\b"
+				}
+			]
+		},
+		"operators":{
+			"patterns": [
+				{
+					"name": "constant.language.kai",
+					"match": "\\*T\\*"
+				}
+			]
+		},
+		"nodes": {
+			"patterns":[
+				{
+					"name": "brackets.kai",
+					"begin": "\\((\\S+)?",
+					"end": "\\)",
+					"beginCaptures": {
+						"1":{
+							"patterns": [
+								{
+									"include": "#first-nodes--labels"
+								}
+							]
+						}
+					},
+					"patterns": [
+						{
+							"include": "#operators"
+						},
+						{
+							"include": "#nodes"
+						}
+					]
+				}
+			]
+		},
+		"first-nodes--labels":{
+			"patterns": [
+				{
+					"match": "(NP-SBJ|PP-SBJ|NP|IP-EMB)?(.*)",
+					"captures": {
+						"1":{
+							"patterns": [
+								{
+									"include": "#non-terminals"
+								},
+								{
+									"include": "#terminals"
+								}
+							]
+						},
+						"2":{
+							"patterns": [
+								{
+									"include": "#first-nodes--ICHeds"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		"first-nodes--ICHeds":{
+			"patterns": [
+				{
+					"match": "(?:-([1-9]\\d*))?(.*)",
+					"captures": {
+						"1":{
+							"name": "constant.numeric.kai"
+						},
+						"2":{
+							"patterns": [
+								{
+									"include": "#first-nodes--sort-infos"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		"first-nodes--sort-infos":{
+			"patterns": [
+				{
+					"match": "(?:\\;\\{(\\S+)\\})?.*",
+					"captures": {
+						"1":{
+							"name": "entity.other.attribute-name.kai"
+						}
+					}
+				}
+			]
+		}
+	}
+}
