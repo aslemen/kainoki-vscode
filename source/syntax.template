@@ -12,7 +12,7 @@
             "patterns": [
                 {
                     "name": "entity.name.type.kai",
-                    "match": "(@non_terminals)"
+                    "match": "(@non_terminals)\\b"
                 }
             ]
         },
@@ -20,7 +20,7 @@
             "patterns": [
                 {
                     "name": "variable.language.kai",
-                    "match": "(@terminals)"
+                    "match": "(@terminals)\\b"
                 }
             ]
         },
