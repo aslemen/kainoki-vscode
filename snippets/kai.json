@@ -1,0 +1,14 @@
+{
+    "IP-REL Rentai": {
+        "prefix": "(IP-REL",
+        "body":[
+            "(IP-REL (NP-SBJ *T*) (NP-PRD $0) (AX の))"
+        ]
+    },
+    "Covert Possessive PP":{
+        "prefix": "(PP",
+        "body":[
+            "(PP (NP;{$0} *pro*) (P *の*))"
+        ]
+    }
+}

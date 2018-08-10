@@ -21,6 +21,12 @@
             "language": "kai",
             "scopeName": "text.penn.kai",
             "path": "./syntaxes/kai.tmLanguage.json"
-        }]
+        }],
+        "snippets": [
+            {
+                "language": "kai",
+                "path": "./snippets/kai.json"
+            }
+        ]
     }
 }
