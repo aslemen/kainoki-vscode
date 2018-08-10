@@ -27,6 +27,7 @@ for fname, fpath in files:
                         lambda x: x.rstrip(),
                         fstream
                         ),
+                    key = lambda x: len(x),
                     reverse = True
                     )
                 )

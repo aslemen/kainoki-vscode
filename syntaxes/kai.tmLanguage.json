@@ -12,7 +12,7 @@
             "patterns": [
                 {
                     "name": "entity.name.type.kai",
-                    "match": "(multi-sentence|PRN|PP-VOC|PP-TPC|PP-TMP|PP-SNJ2|PP-SCON|PP-SBJ|PP-PRP|PP-PRD|PP-OB2|PP-OB1|PP-MSR|PP-LOC|PP-LGS|PP-CONJ|PP-CND|PP-ADV|PP|PNLP|NUMCLP|NP-VOC|NP-TPC|NP-TMP|NP-SBJ2|NP-SBJ|NP-PRD|NP-POS|NP-OB2|NP-OB1|NP-MSR|NP-LOC|NP-LGS|NP-ADV|NP|NML|IP-SUB|IP-SMC|IP-SCON|IP-REL|IP-NML|IP-MAT|IP-IMP|IP-EMB|IP-CONJ|IP-CND|IP-ADV|INTJP|FS|FRAG-IMP|FRAG|CP-THT|CP-QUE|CP-FINAL|CP-EXL|CONJP|ADVP)"
+                    "match": "(multi-sentence|CP-FINAL|FRAG-IMP|IP-CONJ|IP-SCON|NP-SBJ2|PP-SNJ2|PP-CONJ|PP-SCON|CP-EXL|CP-QUE|CP-THT|IP-EMB|IP-ADV|IP-CND|IP-IMP|IP-MAT|IP-REL|IP-SUB|IP-NML|IP-SMC|NP-ADV|NP-LGS|NP-LOC|NP-MSR|NP-OB1|NP-OB2|NP-POS|NP-PRD|NP-SBJ|NP-TMP|NP-TPC|NP-VOC|NUMCLP|PP-ADV|PP-LGS|PP-LOC|PP-MSR|PP-OB1|PP-OB2|PP-PRD|PP-SBJ|PP-TMP|PP-TPC|PP-VOC|PP-PRP|PP-CND|CONJP|INTJP|ADVP|FRAG|PNLP|NML|PRN|FS|NP|PP)"
                 }
             ]
         },
@@ -20,7 +20,7 @@
             "patterns": [
                 {
                     "name": "variable.language.kai",
-                    "match": "(WPRO|WNUM|WD|WADV|VB2|VB0|VB|SYM|QUOT|QN|Q|PU|PRO|PNL|P-ROLE|P-OPTR|P-FINAL|P-CONN|P-COMP|P|NUM|NPR|NEG|N|MD|INTJ|ID|FW|FN|D|CONJ|CL|AXD|AX|ADV|ADJN|ADJI|-RRB-|-LRB-)"
+                    "match": "(P-FINAL|P-COMP|P-CONN|P-OPTR|P-ROLE|-LRB-|-RRB-|QUOT|ADJI|ADJN|WADV|WNUM|CONJ|INTJ|WPRO|SYM|PNL|ADV|AXD|NEG|NUM|NPR|PRO|VB0|VB2|PU|FN|AX|MD|CL|WD|QN|FW|VB|ID|D|Q|N|P)"
                 }
             ]
         },
@@ -28,7 +28,7 @@
             "patterns": [
                 {
                     "name": "constant.language.kai",
-                    "match": "(\\*speaker\\*|\\*speaker+pro\\*|\\*speaker+hearer\\*|\\*pro\\*|\\*hearer\\*|\\*hearer+pro\\*|\\*exp\\*|\\*arb\\*|\\*\\*\\*|\\*T\\*|\\*.e\\*)"
+                    "match": "(\\*speaker+hearer\\*|\\*speaker+pro\\*|\\*hearer+pro\\*|\\*speaker\\*|\\*hearer\\*|\\*pro\\*|\\*arb\\*|\\*exp\\*|\\*\\*\\*|\\*.e\\*|\\*T\\*)"
                 }
             ]
         },
@@ -61,7 +61,7 @@
         "first-nodes--labels":{
             "patterns": [
                 {
-                    "match": "(multi-sentence|WPRO|WNUM|WD|WADV|VB2|VB0|VB|SYM|QUOT|QN|Q|PU|PRO|PRN|PP-VOC|PP-TPC|PP-TMP|PP-SNJ2|PP-SCON|PP-SBJ|PP-PRP|PP-PRD|PP-OB2|PP-OB1|PP-MSR|PP-LOC|PP-LGS|PP-CONJ|PP-CND|PP-ADV|PP|PNLP|PNL|P-ROLE|P-OPTR|P-FINAL|P-CONN|P-COMP|NUMCLP|NUM|NPR|NP-VOC|NP-TPC|NP-TMP|NP-SBJ2|NP-SBJ|NP-PRD|NP-POS|NP-OB2|NP-OB1|NP-MSR|NP-LOC|NP-LGS|NP-ADV|NML|NEG|N|MD|IP-SUB|IP-SMC|IP-SCON|IP-REL|IP-NML|IP-MAT|IP-IMP|IP-EMB|IP-CONJ|IP-CND|IP-ADV|INTJP|INTJ|ID|FW|FS|FRAG-IMP|FRAG|FN|D|CP-THT|CP-QUE|CP-FINAL|CP-EXL|CONJP|CONJ|CL|AXD|AX|ADVP|ADV|ADJN|ADJI|-RRB-|-LRB-)?(.*)",
+                    "match": "(multi-sentence|CP-FINAL|FRAG-IMP|IP-CONJ|IP-SCON|NP-SBJ2|PP-SNJ2|PP-CONJ|PP-SCON|P-FINAL|CP-EXL|CP-QUE|CP-THT|IP-EMB|IP-ADV|IP-CND|IP-IMP|IP-MAT|IP-REL|IP-SUB|IP-NML|IP-SMC|NP-ADV|NP-LGS|NP-LOC|NP-MSR|NP-OB1|NP-OB2|NP-POS|NP-PRD|NP-SBJ|NP-TMP|NP-TPC|NP-VOC|NUMCLP|PP-ADV|PP-LGS|PP-LOC|PP-MSR|PP-OB1|PP-OB2|PP-PRD|PP-SBJ|PP-TMP|PP-TPC|PP-VOC|PP-PRP|PP-CND|P-COMP|P-CONN|P-OPTR|P-ROLE|CONJP|INTJP|-LRB-|-RRB-|ADVP|FRAG|PNLP|QUOT|ADJI|ADJN|WADV|WNUM|CONJ|INTJ|WPRO|NML|PRN|SYM|PNL|ADV|AXD|NEG|NUM|NPR|PRO|VB0|VB2|FS|NP|PP|PU|FN|AX|MD|CL|WD|QN|FW|VB|ID|D|Q|N|P)?(.*)",
                     "captures": {
                         "1":{
                             "patterns": [
