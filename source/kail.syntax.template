@@ -1,0 +1,64 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "kail",
+    "scopeName": "text.penn.kail",
+    "patterns": [
+        {
+            "include": "#nodes"
+        }
+    ],
+    "repository": {
+        "non-terminals": {
+            "patterns": [
+                {
+                    "name": "entity.name.type.kai",
+                    "match": "(@non_terminals)\\b"
+                }
+            ]
+        },
+        "terminals":{
+            "patterns": [
+                {
+                    "name": "variable.language.kai",
+                    "match": "(@terminals)\\b"
+                }
+            ]
+        },
+        "operators":{
+            "patterns": [
+                {
+                    "name": "constant.language.kai",
+                    "match": "(@operators)"
+                }
+            ]
+        },
+        "nodes":{
+            "patterns": [
+                {
+                    "match": "^\\s*(\\S+)(?:\\s*([0-9]+))?(?:\\s*(\\S+))?\\s*(.*?)$",
+                    "captures": {
+                        "1":{
+                            "patterns": [
+                                {
+                                    "include": "#non-terminals"
+                                },
+                                {
+                                    "include": "#terminals"
+                                }
+                            ]
+                        },
+                        "2":{
+                            "name": "constant.numeric.kai"
+                        },
+                        "3":{
+                           "name": "entity.other.attribute-name.kai"
+                        },
+                        "4":{
+                            "name": "invalid.illegal.kai"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

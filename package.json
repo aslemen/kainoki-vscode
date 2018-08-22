@@ -11,17 +11,32 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
+        "languages": [
+            {
             "id": "kai",
             "aliases": ["kainoki", "kai"],
             "extensions": [".kai",".psd"],
             "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
+            },
+            {
+                "id": "kail",
+                "aliases": ["kail"],
+                "extensions": [".kail"],
+                "configuration": "./language-configuration.json"
+                }
+        ],
+        "grammars": [
+            {
             "language": "kai",
             "scopeName": "text.penn.kai",
             "path": "./syntaxes/kai.tmLanguage.json"
-        }],
+            },
+            {
+                "language": "kail",
+                "scopeName": "text.penn.kail",
+                "path": "./syntaxes/kail.tmLanguage.json"
+            }
+        ],
         "snippets": [
             {
                 "language": "kai",

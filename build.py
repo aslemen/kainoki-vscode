@@ -42,7 +42,7 @@ def syntax():
     # 6. Do templating
     result: str = None
 
-    with open("./source/syntax.template") as temp:
+    with open("./source/kai.syntax.template") as temp:
         template = TRender(temp.read())
         result = template.render(regexes)
 
@@ -50,4 +50,11 @@ def syntax():
     with open("./syntaxes/kai.tmLanguage.json", mode="w") as syn:
         syn.write(result)
 
+    with open("./source/kail.syntax.template") as temp:
+        template = TRender(temp.read())
+        result = template.render(regexes)
+
+    # 7. Write it into ./syntaxes/kai.tmLanguage.json (allowing overwriting)
+    with open("./syntaxes/kail.tmLanguage.json", mode="w") as syn:
+        syn.write(result)
     # ===END===
